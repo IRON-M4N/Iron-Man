@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Play A Song - IRONMANH4X</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    function playSongFromURL(url) {
+      var audio = new Audio(url);
+      audio.play();
+    }
+    $(document).ready(function() {
+      $('.glowing-button2, .glowing-button3').on('click', function() {
+        var songName = $(this).text().trim();
+        var songURL = getSongURL(songName);
+        playSongFromURL(songURL);
+      });
+    });
+    function getSongURL(songName) {
+      switch (songName) {
+        case 'Metamorphosis':
+          return 'Audio/METAMORPHOSIS.mp3';
+        case 'Life Waster':
+          return 'Audio/CORPSE - LIFE WASTER.mp3';
+        case 'Ugly':
+          return 'Audio/Timmies - Ugly.mp3';
+        case 'Can Can Phonk':
+          return 'Audio/Can Can Phonk.mp3';
+          case 'Blood':
+          return 'Audio/Blood.mp3';
+          case 'On My Own':
+          return 'Audio/Darci - On my Own.mp3';
+          case 'Let Me Die':
+          return 'NIGHTCORE - LET ME DIE.mp3';
+          case 'After Dark':
+          return 'Audio/AFTER DARK .mp3';
+          case 'アイドル':
+          return 'Audio/アイドル.mp3';
+          case 'TIME BACK':
+          return 'Audio/Bad Style Time Back_160k.mp3';
+        default:
+          return '';
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="glowing-button-wrap">
+    <h1>Click a Button To Play A Song</h1>
+    <button class="glowing-button2">Metamorphosis</button>
+    <br />
+    <button class="glowing-button3">On My Own</button>
+    <br />
+    <button class="glowing-button2">Life Waster</button>
+    <br />
+    <button class="glowing-button3">Let Me Die</button>
+    <br />
+    <button class="glowing-button2">Can Can Phonk</button>
+    <br />
+    <button class="glowing-button3">After Dark</button>
+    <br />
+    <button class="glowing-button2">Ugly</button>
+    <br />
+    <button class="glowing-button3">アイドル</button>
+    <br />
+    <button class="glowing-button2">Blood</button>
+    <br />
+    <button class="glowing-button3">TIME BACK</button>
+  </div>
+</body>
+</html>
